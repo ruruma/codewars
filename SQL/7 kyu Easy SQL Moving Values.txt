@@ -1,0 +1,7 @@
+/*  SQL  */
+SELECT length(name) AS id,
+length(CAST (legs AS text)) AS name,
+length(CAST (arms AS text)) AS legs,
+length(characteristics) AS arms,
+length(CAST (id AS text)) AS characteristics
+FROM monsters
