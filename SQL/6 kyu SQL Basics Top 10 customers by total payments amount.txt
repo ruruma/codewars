@@ -1,0 +1,5 @@
+SELECT cus.customer_id, cus.email, COUNT(pay.payment_id) AS payments_count, SUM(CAST(pay.amount AS float)) AS total_amount
+FROM customer AS cus JOIN payment AS pay ON cus.customer_id = pay.customer_id
+GROUP BY cus.customer_id
+ORDER BY total_amount DESC
+LIMIT 10
